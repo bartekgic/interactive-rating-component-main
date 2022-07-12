@@ -1,0 +1,133 @@
+$orange: hsl(25, 97%, 53%);
+$white: hsl(0, 0%, 100%);
+$white-transparent: hsl(0, 0%, 100%, 0.15);
+$light-grey: hsl(217, 12%, 63%);
+$medium-grey: hsl(216, 12%, 54%, 0.2);
+$dark-blue: hsl(213, 19%, 18%);
+$very-dark-blue: hsl(216, 12%, 8%);
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	color: $white;
+	font-family: 'Overpass', sans-serif;
+	background-color: $very-dark-blue;
+}
+.hide {
+	position: absolute;
+	visibility: hidden;
+	display: none;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
+	margin: 0 1rem;
+	max-width: 340px;
+	background: radial-gradient(at 50% 0%, $white-transparent, $dark-blue 50%);
+	border-radius: 1rem;
+
+	.star {
+		display: flex;
+		width: fit-content;
+		padding: 1rem;
+		margin-bottom: 1rem;
+		background-color: $medium-grey;
+		border-radius: 50%;
+		.star-img {
+			width: 1rem;
+			height: 1rem;
+		}
+	}
+	.title {
+		font-size: 1.5rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+	}
+	.title-info {
+		color: $light-grey;
+		font-size: 0.8rem;
+	}
+	.evaluation {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 1.5rem 0;
+		.evaluation-mark {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 3rem;
+			height: 3rem;
+			color: $light-grey;
+			background-color: $medium-grey;
+			border-radius: 50%;
+			cursor: pointer;
+			transition: 0.1s;
+			&:hover {
+				color: $white;
+				background-color: $orange;
+			}
+		}
+		.active {
+			background-color: $light-grey;
+			color: $white;
+		}
+	}
+	.submit-btn {
+		width: 100%;
+		padding: 1rem 0;
+		background-color: $orange;
+		color: $white;
+		letter-spacing: 0.1rem;
+		border: none;
+		border-radius: 2rem;
+		cursor: pointer;
+		transition: 0.1s;
+		&:hover {
+			color: $orange;
+			background-color: $white;
+		}
+	}
+	.wrapper-2 {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		max-width: 340px;
+		height: 301px;
+		.thank-you-img {
+			transform: scale(0.9);
+		}
+		.selected-mark {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 1.5rem;
+			background-color: $medium-grey;
+			border-radius: 1rem;
+			padding: 0.5rem 0.9rem;
+			.selected-mark-info {
+				font-size: 0.8rem;
+				color: $orange;
+			}
+		}
+		.thank-you {
+			margin-top: 1.5rem;
+			font-size: 2rem;
+		}
+		.thank-you-info {
+			margin-top: 0.5rem;
+			color: $light-grey;
+			font-size: 0.85rem;
+		}
+	}
+}
